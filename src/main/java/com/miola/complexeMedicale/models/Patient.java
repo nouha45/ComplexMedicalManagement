@@ -72,6 +72,7 @@ public class Patient implements Serializable{
 		this.password = password;
 	}
 	
+	
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}

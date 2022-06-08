@@ -261,7 +261,7 @@ List<Doctor> doctors = doc.getAllDoctors();
   <!-- second row -->
   
   <div class="row" >
-  <div class="col-lg-7 col-md-12" >
+  <div class="col-lg-12 col-md-12 d-flex" >
   <div class="card" style="min-height: 485px; display:flex">
   <div class="card-header card-header-text">
   <h4 class="card-title">Employess stats</h4>
@@ -280,6 +280,7 @@ List<Doctor> doctors = doc.getAllDoctors();
      <thead class="text-primary">
      <tr>
      <th>id</th>
+      <th>username</th>
      <th>nom</th>
      <th>prenom</th>
      <th>email</th>

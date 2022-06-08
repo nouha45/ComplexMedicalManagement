@@ -35,7 +35,7 @@ public class PatientDaoImp {
 					Patient row = new Patient();
 					row.setId(rs.getInt("id"));
 					row.setNom(rs.getString("nom"));
-					row.setNom(rs.getString("username"));
+					row.setUsername(rs.getString("username"));
 					row.setPrenom(rs.getString("prenom"));
 					row.setTel(rs.getString("tel"));
 					row.setEmail(rs.getString("email"));

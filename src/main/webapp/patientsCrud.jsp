@@ -54,7 +54,7 @@ List<Patient> patients = doc.getAllPatients();
   </div>
   <ul class="list-unstyled components">
   <li class="active">
-  <a href="#" class="dashboard"><i class="material-icons">dashboard</i><span>dashboard</span></a>
+  <a href="dashboardAdmin.jsp" class="dashboard"><i class="material-icons">dashboard</i><span>dashboard</span></a>
   </li>
   <div class="small-screen navbar-display">
   <li class="dropdown d-lg-none d-md-bloc d-xl-none d-sm-block">
@@ -191,7 +191,7 @@ List<Patient> patients = doc.getAllPatients();
  <div class="row" style="display:flex;
                        margin-left:60px;
                      width:1100px ">
-  <div class="col-lg-7 col-md-12 d-flex">
+  <div class="col-lg-12 col-md-12 d-flex">
   <div class="card" style="min-height: 485px; ">
   <div class="card-header card-header-text " >
   <h4 class="card-title">Patients stats</h4>
