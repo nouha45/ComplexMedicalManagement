@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>ComplexeMedicaleJee</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/ErrorPage.jsp</location>
+	</error-page>
+	<context-param>
+    <param-name>
+        javax.faces.INTERPRET_EMPTY_STRING_SUBMITTED_VALUES_AS_NULL
+    </param-name>
+    <param-value>true</param-value>
+</context-param>
+<session-config>
+    <session-timeout>60</session-timeout>
+  </session-config>
+  
+    <servlet>
+    <description></description>
+    <display-name>InscriptionServlet</display-name>
+    <servlet-name>InscriptionServlet</servlet-name>
+    <servlet-class>com.miola.complexeMedicale.controllers.InscriptionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InscriptionServlet</servlet-name>
+    <url-pattern>/Vue/InscriptionServlet</url-pattern>
+  </servlet-mapping>
+<servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.miola.complexeMedicale.controllers.LoginServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/Vue/LoginServlet</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>MakeAppoiServlet</display-name>
+    <servlet-name>MakeAppoiServlet</servlet-name>
+    <servlet-class>com.miola.complexeMedicale.controllers.MakeAppoiServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MakeAppoiServlet</servlet-name>
+    <url-pattern>/Vue/Appointement</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>AddDocServlet</display-name>
+    <servlet-name>AddDocServlet</servlet-name>
+    <servlet-class>com.miola.complexeMedicale.controllers.AddDocServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddDocServlet</servlet-name>
+    <url-pattern>/AddDoc</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>AddPatServlet</display-name>
+    <servlet-name>AddPatServlet</servlet-name>
+    <servlet-class>com.miola.complexeMedicale.controllers.AddPatServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddPatServlet</servlet-name>
+    <url-pattern>/AddPat</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>EditDocServlet</display-name>
+    <servlet-name>EditDocServlet</servlet-name>
+    <servlet-class>com.miola.complexeMedicale.controllers.EditDocServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditDocServlet</servlet-name>
+    <url-pattern>/EditDoc</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>EditPatServlet</display-name>
+    <servlet-name>EditPatServlet</servlet-name>
+    <servlet-class>com.miola.complexeMedicale.controllers.EditPatServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EditPatServlet</servlet-name>
+    <url-pattern>/EditPat</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>UpdateDocServlet</display-name>
+    <servlet-name>UpdateDocServlet</servlet-name>
+    <servlet-class>com.miola.complexeMedicale.controllers.UpdateDocServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateDocServlet</servlet-name>
+    <url-pattern>/UpdateDoc</url-pattern>
+  </servlet-mapping>
+  
+    
+  <servlet>
+    <description></description>
+    <display-name>UpdatePatServlet</display-name>
+    <servlet-name>UpdatePatServlet</servlet-name>
+    <servlet-class>com.miola.complexeMedicale.controllers.UpdatePatServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdatePatServlet</servlet-name>
+    <url-pattern>/UpdatePat</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>NavigationServlet</display-name>
+    <servlet-name>NavigationServlet</servlet-name>
+    <servlet-class>com.miola.complexeMedicale.controllers.NavigationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NavigationServlet</servlet-name>
+    <url-pattern>/NavigationServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>DeleteDocServlet</display-name>
+    <servlet-name>DeleteDocServlet</servlet-name>
+    <servlet-class>com.miola.complexeMedicale.controllers.DeleteDocServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteDocServlet</servlet-name>
+    <url-pattern>/DeleteDoc</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>DeletePatServlet</display-name>
+    <servlet-name>DeletePatServlet</servlet-name>
+    <servlet-class>com.miola.complexeMedicale.controllers.DeletePatServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeletePatServlet</servlet-name>
+    <url-pattern>/DeletePat</url-pattern>
+  </servlet-mapping>
+  
+ 
+  
+ 
+
+</web-app>
