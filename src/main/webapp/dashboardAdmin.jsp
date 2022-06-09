@@ -45,6 +45,7 @@ List<Doctor> doctors = doc.getAllDoctors();
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
   </head>
   <body>
+  
   <div class="wrapper">
   <div class="body-overlay"></div>
   <!----------sidebar------------->
@@ -534,7 +535,8 @@ sidebar.classList.toggle('show-nav);
 overlay.onclick= function(){
 sidebar.classList.toggle('show-nav);
 }
-</script>
+
+
 
 
 

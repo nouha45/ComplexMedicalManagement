@@ -12,7 +12,7 @@
 </head>
 <body>
    <div class="container">
-   <div class="title"> Edit Doctors</div>
+   <div class="title"> Edit Patients</div>
    <form action="UpdatePat" method="POST" >
    <div class="user-details">
   
@@ -54,7 +54,7 @@
    
      <div class="input-box">
      <button type="submit" class="btn btn-success">Save</button>
-   <a href="#"> <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button></a> 
+   <a href="patientsCrud.jsp"> <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button></a> 
      </div>
     </div>
    </form>

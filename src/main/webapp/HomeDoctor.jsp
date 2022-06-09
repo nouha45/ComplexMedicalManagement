@@ -14,10 +14,10 @@
 DoctorDaoImp doc= new DoctorDaoImp(DbCon.getConnection());
 List<Doctor> doctors = doc.getAllDoctors();
 Doctor doctor;
-Object id_p=session.getAttribute("id");
-int idd = (Integer)id_p;
+Object id_d=session.getAttribute("id");
+int idd = (Integer)id_d;
 AppointementDAO appoi = new AppointementDAO(DbCon.getConnection());
-List<RendezVous> rv = appoi.getAllAppById(idd);
+List<RendezVous> rv = appoi.getAllDocAppById(idd);
 RendezVous appointement;
 %>
 <!DOCTYPE html>
@@ -171,59 +171,7 @@ RendezVous appointement;
   </div>
 </div>
 
-<!-- GENERALISTE -->
-<div class="cards" id="cards">
-<div class="genContainer ">
- <%
- if(!doctors.isEmpty()){
-	 System.out.println("ana hna");
-	 for(Doctor d:doctors){
-	 int id_d= d.getId();
-	 System.out.println(id_d);
-	 %>
-		 <div class=" genContent">
-	      <div class=" genCard">
-	          <div class="genCard-content">
-	          <div class="genImage">
-	            <img alt="" src="img/doc.jpg">
-	          </div>
-	          
-	          <div class="media-icons">
-	          <i class="fab fa-facebook"></i>
-	          <i class="fab fa-twitter"></i>
-	          <i class="fab fa-google"></i>
-	          </div>
-	          <div class="name-prof">
-	          <span class="name">Dr.<%= d.getNom() %><% out.println(" "+d.getPrenom()); %></span>
-	          <span class="prof">Generalist doctor</span>
-	          </div>
-	          
-	          <div class="rating">
-	          <i class="fas fa-star"></i>
-	          <i class="fas fa-star"></i>
-	          <i class="fas fa-star"></i>
-	          <i class="far fa-star"></i>
-	          <i class="far fa-star"></i>
-	          </div>
-	          <div class="genBtn">
-	          <button class="ab" ><a href="user-form.jsp?id=<%=d.getId()%>">Make an appointment</button>
-	          </div>
-	          </div>
-	          </div>
-	  </div>
-	  
 
-	  
-	      
-	  
-	<% }}
- 
- %>
- 
-  
-
-       </div>
-</div>
 
 
 
@@ -298,16 +246,16 @@ RendezVous appointement;
 	 System.out.println("ana hna");
 	 for(RendezVous ap:rv){
 		 Connection con = DbCon.getConnection();
-		 PreparedStatement ps=con.prepareStatement("select nom,prenom from doctor where id=?");
-		int id_d= ap.getId_d();
-		 ps.setInt(1, id_d);
+		 PreparedStatement ps=con.prepareStatement("select nom,prenom from patient where id=?");
+		int id_p= ap.getId_p();
+		 ps.setInt(1, id_p);
 		 ResultSet rs =ps.executeQuery();
 		 if(rs.next()){
 		 
 	 %>
 	 <div >
                                 <span class="RvText" >Your appointement:</span><br>
-                                <span ><%= ap.getDate() %>with Dr.<% out.print(rs.getString(1)+" "+rs.getString(2)); %></span><br>
+                                <span ><%= ap.getDate() %>with Mme.<% out.print(rs.getString(1)+" "+rs.getString(2)); %></span><br>
  </div>
  <%
 }

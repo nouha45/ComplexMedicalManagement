@@ -84,10 +84,15 @@ public class LoginServlet extends HttpServlet {
                 if(loginbean.getType().equals("Admin")) {
                     request.getRequestDispatcher("dashboardAdmin.jsp").forward(request, response);
                     System.out.println("admin");
-                } else if(loginbean.getType().equals("Medecin")){
-                    this.getServletContext().getRequestDispatcher("/espacePsy.jsp").forward(request, response);
+                } 
+                
+                else if(loginbean.getType().equals("Medecin")){
+                    this.getServletContext().getRequestDispatcher("/HomeDoctor.jsp").forward(request, response);
 
-                }else {
+                }
+                else
+                	
+                {
                     request.getRequestDispatcher("/HomePatient.jsp").forward(request, response);
 
                 }

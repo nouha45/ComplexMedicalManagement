@@ -65,6 +65,7 @@ public class AddDocServlet extends HttpServlet {
 			 int row= preparedStatement.executeUpdate();
 			 if(row>0) {
 				 System.out.println("okkk");
+				 request.setAttribute("status", "success");
 			 }else {
 				 System.out.println("laaaa");
 			 }

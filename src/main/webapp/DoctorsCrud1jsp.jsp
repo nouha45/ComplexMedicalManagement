@@ -42,7 +42,7 @@ List<Doctor> doctors = doc.getAllDoctors();
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
-  
+  <input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
   <div class="wrapper">
   <div class="body-overlay"></div>
   <!----------sidebar------------->
@@ -52,7 +52,7 @@ List<Doctor> doctors = doc.getAllDoctors();
   </div>
   <ul class="list-unstyled components">
   <li class="active">
-  <a href="#" class="dashboard"><i class="material-icons">dashboard</i><span>dashboard</span></a>
+  <a href="dashboardAdmin.jsp" class="dashboard"><i class="material-icons">dashboard</i><span>dashboard</span></a>
   </li>
   <div class="small-screen navbar-display">
   <li class="dropdown d-lg-none d-md-bloc d-xl-none d-sm-block">
@@ -415,6 +415,19 @@ overlay.onclick= function(){
 sidebar.classList.toggle('show-nav);
 }
 </script>
+</script>
+<script type="text/javascript">
+var status = document.getElementById("status").value;
+if(status=="success"){
+	swal("Congrats","Account Created Successfully","success");
+}else{
+	swal("Ops","Something went wrong","failed");
+	
+	
+}
+
+
+</script >
 
 
 

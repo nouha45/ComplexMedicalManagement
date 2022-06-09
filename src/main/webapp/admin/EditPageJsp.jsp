@@ -58,7 +58,7 @@
    </div>
      <div class="input-box">
      <button type="submit" class="btn btn-success">Save</button>
-   <a href="#"> <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button></a> 
+   <a href="DashboardCrud1jsp.jsp"> <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button></a> 
      </div>
     </div>
    </form>

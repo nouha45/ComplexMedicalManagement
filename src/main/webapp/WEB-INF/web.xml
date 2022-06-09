@@ -51,7 +51,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>MakeAppoiServlet</servlet-name>
-    <url-pattern>/Vue/Appointement</url-pattern>
+    <url-pattern>/Appointement</url-pattern>
   </servlet-mapping>
   
   

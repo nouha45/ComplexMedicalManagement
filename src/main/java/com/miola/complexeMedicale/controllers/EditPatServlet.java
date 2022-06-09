@@ -61,7 +61,7 @@ public class EditPatServlet extends HttpServlet {
 					String email =rs.getString("email");
 					String password =rs.getString("password");
 					
-					patientToEdit = new Patient(id,username,nom,prenom,tel,email,password);
+					patientToEdit = new Patient(id,username,nom,prenom,email,tel,password);
 					System.out.println("l'execution dazt mzn");
 				
 				}}catch(Exception e) {

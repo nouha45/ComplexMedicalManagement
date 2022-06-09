@@ -61,7 +61,7 @@ public class UpdatePatServlet extends HttpServlet {
 					  preparedStatement.setString(5, email);
 					  preparedStatement.setString(6, password);
 					  
-					  preparedStatement.setInt(8,id);
+					  preparedStatement.setInt(7,id);
 					  System.out.println("l'erreur dial null mchat");
 					  
 					  

@@ -44,11 +44,11 @@ public class LoginDao {
         Class.forName("com.mysql.cj.jdbc.Driver");
 
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/complexemed", "root", "");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/complexmedicale", "root", "");
             String tablename = null;
             //Type d'utilisateur
             if(loginbean.getType().equals("Medecin"))
-                tablename = "medcin";
+                tablename = "doctor";
             if(loginbean.getType().equals("Patient"))
                 tablename = "patient";
             if(loginbean.getType().equals("Admin"))
